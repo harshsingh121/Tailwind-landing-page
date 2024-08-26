@@ -3,11 +3,528 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajak/libs/font-awesome/6.1.1/css/all.min.css">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>Dev class</title>
 </head>
 <body>
+
+ <nav class="p-3 flex bg-white justify-between items-center">
+    <a href="#" id="brand" class="flex gap-2 items-center flex-1">
+        <img class="object-cover max-w-8 max-h-8" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxmotj-5Z6a_M5q_JnRhgBsB7Fyjbvzc3kuTIrjARq9w4v5UCBHwdtVydjqAP7L165JWM&usqp=CAU" alt="img">
+        <span class="text-lg font-medium font-display">Simplify</span>
+    </a>
+    <div id="nav-menu" class="hidden lg:flex gap-12">
+        <a href="#" class="font-medium hover:text-blue-500">Pricing</a>
+        <a href="#" class="font-medium hover:text-blue-500">Docs</a>
+        <a href="#" class="font-medium hover:text-blue-500">FAQs</a>
+        <a href="#" class="font-medium hover:text-blue-500">Plans</a>
+        <a href="#" class="font-medium hover:text-blue-500">Login</a>
+
+    </div>
+    <div class="flex-1 hidden lg:flex justify-end">
+        <button class="hidden lg:flex gap-2 items-center border border-gray-400 px-6 py-2 rounded-s-lg hover:border-gray-600 ">
+            <img class="max-w-6 max-h-6" src="https://www.svgrepo.com/show/327355/logo-electron.svg" alt="img">
+            <span>Developer Zone</span>
+            <img class="max-w-5 ,max-h-5" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUKl-3jwzr5iU0M4IQpQBvE20xYWvJu18vbQ&s" alt="img">
+        </button> 
+    </div>
+   
+
+    <button class="p-2 lg:hidden" onclick="handleMenu()">
+       <img class="max-w-4 max-h-4" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrCfigNcL1PLbTlU5e0_El3cFoOA5VK6DcYqQSoJKmnAcJshbduY5ULKVUlsUVxSLdwEQ&usqp=CAU" alt="img">
+    </button>
+
+    <div id="nav-dailog" class=" hidden fixed bg-white inset-0 p-3 z-10 lg:hidden">
+        <div id="nav-bar " class="flex justify-between">
+            <a href="#" id="brand" class="flex gap-2 items-center">
+                <img class="object-cover max-w-12 max-h-12" src="https://bcassetcdn.com/public/blog/wp-content/uploads/2021/11/30151526/Beats-1.jpg" alt="img">
+                <span class="text-lg font-medium font-display">ToDesktop</span>
+            </a>
+            <button class="p-2 lg:hidden" onclick="handleMenu()">
+                <img class="max-w-4 max-h-4" src="https://static.thenounproject.com/png/128143-200.png" alt="img">
+             </button>
+        </div>
+        <div class="mt-6">
+            <a href="#" class="font-medium m-3 p-3 hover:bg-gray-50 block rounded-lg">Pricing</a>
+            <a href="#" class="font-medium m-3 p-3 hover:bg-gray-50 block rounded-lg">Docs</a>
+            <a href="#" class="font-medium m-3 p-3 hover:bg-gray-50 block rounded-lg">FAQs</a>
+            <a href="#" class="font-medium m-3 p-3 hover:bg-gray-50 block rounded-lg">Plans</a>
+            <a href="#" class="font-medium m-3 p-3 hover:bg-gray-50 block rounded-lg">Login</a>
+         
+        </div>
+        <div class="h-[1px] bg-gray-300"></div>
+        <button class=" w-full mt-6 flex gap-2 items-center  px-6 py-4 rounded-s-lg hover:bg-gray-50">
+            <img class="max-w-5 max-h-5" src="https://cdn-icons-png.flaticon.com/512/443/443525.png" alt="img">
+            <span>Electron Developer</span>
+          
+        </button> 
+    </div>
+
+</nav>  
+
+
+<main>
+    <div id="hero" class="min-h-screen bg-gradient-to-b from-purple-50 via-orange-50 to-transparent ">
+        <div id="hero-container" class="max-w-4xl mx-auto px-6 pt-6 pb-32 flex flex-col sm:items-center sm:text-center sm:pt-12">
+          <div id="version-text" class="flex my-6 gap-2 items-center border border-yellow-300 bg-yellow-50 rounded-lg px-3 py-1 w-fit sahdow-md hover:shadow-lg hover:translate-y-2 transition group">
+                   <div class=" w-2 h-2 bg-yellow-400 border rounded-full border-yellow-600"></div>
+                   <p class="font-display font-medium text-yellow-600">V20.02.1 <span class="text-yellow-800">Find Bugs and resolve it</span></p>
+                   <img class="max-w-5 ,max-h-5 group-hover:translate-x-2 transition duration-300 bg-yellow-400" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUKl-3jwzr5iU0M4IQpQBvE20xYWvJu18vbQ&s" alt="img">
+             
+
+          </div>
+          <div id="hero-feature" class="hidden sm:flex  my-6 ">
+          <div class="flex justify-center gap-2 items-center text-gray-500">
+            <img class="max-w-7 max-h-7" src="https://static.thenounproject.com/png/549492-200.png" alt="img">
+            <p>Code Optional</p>
+            <div class="flex justify-center gap-2 items-center text-gray-500">
+                <img class="max-w-8 max-h-8" src="https://cdn0.iconfinder.com/data/icons/hands-pt-3/100/051_-_drag-512.png" alt="img">
+                <p>Drag and Drop Builder</p>
+              </div>
+              <div class="flex justify-center gap-2 items-center text-gray-500">
+                <img class="max-w-6 max-h-6" src="https://cdn-icons-png.freepik.com/512/2933/2933190.png" alt="img">
+                <p>Window,Linux,Mac</p>
+              </div>
+             
+          </div>
+          </div>
+          <h1 class="text-4xl font-display font-semibold leading-snug mt-4 sm:text-5xl">Web App to Desktop app in minutes</h1>
+          <p class="text-xl mt-5 sm:text-2xl sm:mt-7 text-gray-800">Take your web  app codebase and transform it into a cross platform desktop app with native functionally</p>
+          <div id="button-container" class="mt-12 flex flex-col gap-4 sm:flex-row">
+            <button class="px-8 py-3 font-semibold rounded-lg text-white bg-blue-500 shadow-sm hover:bg-opacity-90">Download Now</button>
+            <button class="px-8 py-3 font-semibold rounded-lg bg-white border border-gray-400 hover:border-gray-800">Read Docs</button>
+
+          </div>
+         </div>
+     
+       
+         <div id="compaines container" class="flex flex-col gap-8 mb-2">
+        <div id="Company-title" class="flex justify-center gap-2">
+        <img class=" translate-y-2 max-h-6 max-w-6" src="https://cdn-icons-png.flaticon.com/512/3183/3183327.png" alt=" IMG">
+        <span class="font-medium">APPS POWERED TO DESKTOP</span>
+        <img  class="-scale-x-100  max-w-6 max-h-6 translate-y-2" src="https://cdn-icons-png.flaticon.com/512/3183/3183327.png" alt=" IMG">
+      
     
+        </div>
+
+        <div class="flex flex-wrap gap-4 justify-center ">
+         
+            <div class="flex flex-col min-w-36 min-h-36 items-center justify-center bg-white rounded-xl border-gray-300">
+                <img class="w-16 h-16 md:h-24 md:w-24" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZ99clJ9uWmomyjNVgO-PjeZrnur-_sswiUg&s" alt="img">
+                  <span class="text-[12px] md:text-[16px] font-semibold">Google</span>
+             </div>
+    
+          
+             <div class="flex flex-col min-w-36 min-h-36 items-center justify-center bg-white rounded-xl border-gray-300">
+                <img class="w-16 h-16 md:h-24 md:w-24" src="https://thumbs.dreamstime.com/b/yahoo-icon-simple-style-white-background-yahoo-icon-simple-style-125821081.jpg" alt="img">
+                  <span class="text-[12px] md:text-[16px] font-semibold">Yahoo</span>
+             </div>
+    
+          
+             <div class="flex flex-col min-w-36 min-h-36 items-center justify-center bg-white rounded-xl border-gray-300">
+                <img class="w-16 h-16 md:h-24 md:w-24" src="https://static.vecteezy.com/system/resources/previews/018/910/687/original/youtube-logo-youtube-icon-youtube-symbol-free-free-vector.jpg" alt="img">
+                  <span class="text-[12px] md:text-[16px] font-semibold">Youtube</span>
+             </div>
+    
+          
+             <div class="flex flex-col min-w-36 min-h-36 items-center justify-center bg-white rounded-xl border-gray-300">
+                <img class="w-16 h-16 md:h-24 md:w-24" src="https://i.pinimg.com/736x/0c/78/d0/0c78d03cbfa19d5f3d7ad1b6e49f957b.jpg" alt="img">
+                  <span class="text-[12px] md:text-[16px] font-semibold">Linkedln</span>
+             </div>
+    
+          
+             <div class="flex flex-col min-w-36 min-h-36 items-center justify-center bg-white rounded-xl border-gray-300">
+                <img class="w-16 h-16 md:h-24 md:w-24" src="https://i.pinimg.com/originals/b0/6f/e8/b06fe8f89fd572d0225a14e9fa9f21e6.png" alt="img">
+                  <span class="text-[12px] md:text-[16px] font-semibold">Instagram</span>
+             </div>
+    
+          
+             <div class="flex flex-col min-w-36 min-h-36 items-center justify-center bg-white rounded-xl border-gray-300">
+                <img class="w-16 h-16 md:h-24 md:w-24" src="https://st3.depositphotos.com/1007566/12594/v/450/depositphotos_125948768-stock-illustration-facebook-classic-emblem-icon.jpg" alt="img">
+                  <span class="text-[12px] md:text-[16px] font-semibold">Facebook</span>
+             </div>
+    
+          
+             <div class="flex flex-col min-w-36 min-h-36 items-center justify-center bg-white rounded-xl border-gray-300">
+                <img class="w-16 h-16 md:h-24 md:w-24" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzZuiSqCnUtaQSq1-BUT5sjAWVMZRaNpd-LA&s" alt="img">
+                  <span class="text-[12px] md:text-[16px] font-semibold">Microsoft</span>
+             </div>
+    
+          
+
+  
+
+           
+        </div>
+ 
+         <!-- <div class="flex flex-wrap gap-4 justify-center">
+       
+         <div class="flex flex-col min-w-36 min-h-36 items-center justify-center bg-white rounded-xl border-gray-300">
+            <img class="w-16 h-16 md:h-24 md:w-24" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQu8bt5ViMzuRDgVWFD_lgA0VMqH-1R5z4uzDH5KARdhpcx7r8yjDru5cqgnmUJkGtjTVE&usqp=CAU" alt="img">
+              <span class="text-[12px] md:text-[16px] font-semibold">Panda</span>
+         </div>
+
+         <div class="flex flex-col min-w-36 min-h-36 items-center justify-center bg-white rounded-xl border-gray-300">
+            <img class="w-16 h-16 md:h-24 md:w-24" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQu8bt5ViMzuRDgVWFD_lgA0VMqH-1R5z4uzDH5KARdhpcx7r8yjDru5cqgnmUJkGtjTVE&usqp=CAU" alt="img">
+              <span class="text-[12px] md:text-[16px] font-semibold">Panda</span>
+         </div>
+         <div class="flex flex-col min-w-36 min-h-36 items-center justify-center bg-white rounded-xl border-gray-300">
+            <img class="w-16 h-16 md:h-24 md:w-24" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQu8bt5ViMzuRDgVWFD_lgA0VMqH-1R5z4uzDH5KARdhpcx7r8yjDru5cqgnmUJkGtjTVE&usqp=CAU" alt="img">
+              <span class="text-[12px] md:text-[16px] font-semibold">Panda</span>
+         </div>
+         <div class="flex flex-col min-w-36 min-h-36 items-center justify-center bg-white rounded-xl border-gray-300">
+            <img class="w-16 h-16 md:h-24 md:w-24" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQu8bt5ViMzuRDgVWFD_lgA0VMqH-1R5z4uzDH5KARdhpcx7r8yjDru5cqgnmUJkGtjTVE&usqp=CAU" alt="img">
+              <span class="text-[12px] md:text-[16px] font-semibold">Panda</span>
+         </div>
+         <div class="flex flex-col min-w-36 min-h-36 items-center justify-center bg-white rounded-xl border-gray-300">
+            <img class="w-16 h-16 md:h-24 md:w-24" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQu8bt5ViMzuRDgVWFD_lgA0VMqH-1R5z4uzDH5KARdhpcx7r8yjDru5cqgnmUJkGtjTVE&usqp=CAU" alt="img">
+              <span class="text-[12px] md:text-[16px] font-semibold">Panda</span>
+         </div>
+         <div class="flex flex-col min-w-36 min-h-36 items-center justify-center bg-white rounded-xl border-gray-300">
+            <img class="w-16 h-16 md:h-24 md:w-24" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQu8bt5ViMzuRDgVWFD_lgA0VMqH-1R5z4uzDH5KARdhpcx7r8yjDru5cqgnmUJkGtjTVE&usqp=CAU" alt="img">
+              <span class="text-[12px] md:text-[16px] font-semibold">Panda</span>
+         </div>
+     
+         
+       </div>
+
+       <div class="flex flex-wrap gap-4 justify-center">
+  
+         <div class="flex flex-col min-w-36 min-h-36 items-center justify-center bg-white rounded-xl border-gray-300">
+            <img class="w-16 h-16 md:h-24 md:w-24" src="https://d3jmn01ri1fzgl.cloudfront.net/photoadking/webp_thumbnail/white-black-white-logo-template-zbau7x8ff6e105.webp" alt="img">
+              <span class="text-[12px] md:text-[16px] font-semibold">Coffee</span>
+         </div>
+      
+         <div class="flex flex-col min-w-36 min-h-36 items-center justify-center bg-white rounded-xl border-gray-300">
+            <img class="w-16 h-16 md:h-24 md:w-24" src="https://d3jmn01ri1fzgl.cloudfront.net/photoadking/webp_thumbnail/white-black-white-logo-template-zbau7x8ff6e105.webp" alt="img">
+              <span class="text-[12px] md:text-[16px] font-semibold">Coffee</span>
+         </div>
+         <div class="flex flex-col min-w-36 min-h-36 items-center justify-center bg-white rounded-xl border-gray-300">
+            <img class="w-16 h-16 md:h-24 md:w-24" src="https://d3jmn01ri1fzgl.cloudfront.net/photoadking/webp_thumbnail/white-black-white-logo-template-zbau7x8ff6e105.webp" alt="img">
+              <span class="text-[12px] md:text-[16px] font-semibold">Coffee</span>
+         </div>
+         <div class="flex flex-col min-w-36 min-h-36 items-center justify-center bg-white rounded-xl border-gray-300">
+            <img class="w-16 h-16 md:h-24 md:w-24" src="https://d3jmn01ri1fzgl.cloudfront.net/photoadking/webp_thumbnail/white-black-white-logo-template-zbau7x8ff6e105.webp" alt="img">
+              <span class="text-[12px] md:text-[16px] font-semibold">Coffee</span>
+         </div>
+         <div class="flex flex-col min-w-36 min-h-36 items-center justify-center bg-white rounded-xl border-gray-300">
+            <img class="w-16 h-16 md:h-24 md:w-24" src="https://d3jmn01ri1fzgl.cloudfront.net/photoadking/webp_thumbnail/white-black-white-logo-template-zbau7x8ff6e105.webp" alt="img">
+              <span class="text-[12px] md:text-[16px] font-semibold">Coffee</span>
+         </div>
+         <div class="flex flex-col min-w-36 min-h-36 items-center justify-center bg-white rounded-xl border-gray-300">
+            <img class="w-16 h-16 md:h-24 md:w-24" src="https://d3jmn01ri1fzgl.cloudfront.net/photoadking/webp_thumbnail/white-black-white-logo-template-zbau7x8ff6e105.webp" alt="img">
+              <span class="text-[12px] md:text-[16px] font-semibold">Coffee</span>
+         </div>
+         <div class="flex flex-col min-w-36 min-h-36 items-center justify-center bg-white rounded-xl border-gray-300">
+            <img class="w-16 h-16 md:h-24 md:w-24" src="https://d3jmn01ri1fzgl.cloudfront.net/photoadking/webp_thumbnail/white-black-white-logo-template-zbau7x8ff6e105.webp" alt="img">
+              <span class="text-[12px] md:text-[16px] font-semibold">Coffee</span>
+         </div>
+      
+       </div> -->
+         </div>
+  
+         <div class="px-6 py-12 max-w-7xl mt-16 mx-auto lg:px-8 lg:mt-32" id="bento-grid">
+         <h2 class="text-5xl sm:font-semibold mb-14">Simplfy handles the details</h2>
+         <div id="grid-container" class="flex flex-col gap-6 lg:grid lg:grid-cols-3" style="grid-auto-rows:96px;">
+            <div class="row-start-1 row-end-3 group rounded-2xl p-[2px] bg-slate-100 hover:bg-gradient-to-br  hover: from-red- hover:via-purple-200 hover:to-yellow-200">
+                <div class="rounded-2xl bg-white  w-full h-full p-6 flex flex-col gap-6 items-center group-hover:bg-gradient-to-br  group-hover: from-red-50 group-hover:via-purple-50 group-hover:to-yellow-50">
+                  <h3 class="text-2xl font-medium">Native Notifications</h3>
+                  <div class="flex gap-4 md:mt-4 ">
+                    <img src="https://cdn-icons-png.freepik.com/512/2558/2558934.png" class="max-w-12 max-h-12" alt="img">
+                        <div class="flex flex-col pt-2">
+                        <p class="font-medium text-sm">New Event!!</p>
+                        <p class="font-normal text-sm text-gray-400">singh@gmail.com</p>
+                        </div>
+                 
+               
+                  </div>
+                 
+
+                </div>
+            </div>
+              
+            <div class="row-start-1 row-end-4 group rounded-2xl p-[2px] bg-slate-100 hover:bg-gradient-to-br  hover: from-red- hover:via-purple-200 hover:to-yellow-200">
+                <div class="rounded-2xl bg-white  w-full h-full p-6 flex flex-col gap-6 items-center group-hover:bg-gradient-to-br  group-hover: from-red-50 group-hover:via-purple-50 group-hover:to-yellow-50">
+                  <h3 class="text-2xl font-medium">New Events!!</h3>
+                  <p class="text-lg text-center font-light"> We'll ensure underlying browser is up to date and deliver performance improvements,security patches, & additional features</p>
+                  <div class="flex gap-2">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNuZK8r2EuQcWUT3DHcqCdjSmmcfCMQKoFkA&s" class="max-w-12 max-h-12" alt="img">
+                        <div class="flex flex-col p-1">
+                        <p class="font-medium text-sm">New Event!!</p>
+                        <p class="font-normal text-sm text-gray-400">singh@gmail.com</p>
+                        </div>
+                 
+               
+                  </div>
+                 
+
+                </div>
+            </div>
+            <div class="row-start-1 row-end-3 group rounded-2xl p-[2px] bg-slate-100 hover:bg-gradient-to-br  hover: from-red- hover:via-purple-200 hover:to-yellow-200">
+                <div class="rounded-2xl bg-white  w-full h-full p-6 flex flex-col gap-6 items-center group-hover:bg-gradient-to-br  group-hover: from-red-50 group-hover:via-purple-50 group-hover:to-yellow-50">
+                  <h3 class="text-2xl font-medium">Native Notifications</h3>
+                  <div class="flex gap-4 md:mt-4">
+                    <img src="https://cdn-icons-png.flaticon.com/512/888/888862.png" class="max-w-12 max-h-12" alt="img">
+                        <div class="flex flex-col pt-1">
+                        <p class="font-medium text-sm">New Event!!</p>
+                        <p class="font-normal text-sm text-gray-400">singh@gmail.com</p>
+                        </div>
+                 
+               
+                  </div>
+                 
+
+                </div>
+            </div>
+            <div class="row-start-3 row-end-6 group rounded-2xl p-[2px] bg-slate-100 hover:bg-gradient-to-br  hover: from-red- hover:via-purple-200 hover:to-yellow-200">
+                <div class="rounded-2xl bg-white  w-full h-full p-6 flex flex-col gap-6 items-center group-hover:bg-gradient-to-br  group-hover: from-red-50 group-hover:via-purple-50 group-hover:to-yellow-50">
+                  <h3 class="text-2xl font-medium">New Events!!</h3>
+                  <p class="text-lg text-center font-light"> We'll ensure underlying browser is up to date and deliver performance improvements,security patches, & additional features</p>
+                  <div class="flex gap-4 mt-6">
+                    <img src="https://cdn1.iconfinder.com/data/icons/google-new-logos-1/32/gmail_new_logo-512.png" class="max-w-12 max-h-12" alt="img">
+                        <div class="flex flex-col pt-1">
+                        <p class="font-medium text-sm">New Event!!</p>
+                        <p class="font-normal text-sm text-gray-400">singh@gmail.com</p>
+                        </div>
+                 
+               
+                  </div>
+                 
+
+                </div>
+            </div>
+            <div class="row-start-4 row-end-6 group rounded-2xl p-[2px] bg-slate-100 hover:bg-gradient-to-br  hover: from-red- hover:via-purple-200 hover:to-yellow-200">
+                <div class="rounded-2xl bg-white  w-full h-full p-6 flex flex-col gap-6 items-center group-hover:bg-gradient-to-br  group-hover: from-red-50 group-hover:via-purple-50 group-hover:to-yellow-50">
+                  <h3 class="text-2xl font-medium">Native Notifications</h3>
+                  <div class="flex gap-2 md:mt-4">
+                    <img src="https://static.vecteezy.com/system/resources/thumbnails/000/439/792/small/Basic_Ui__28178_29.jpg" class="max-w-12 max-h-12" alt="img">
+                        <div class="flex flex-col pt-1">
+                        <p class="font-medium text-sm">New Event!!</p>
+                        <p class="font-normal text-sm text-gray-400">singh@gmail.com</p>
+                        </div>
+                 
+               
+                  </div>
+                 
+
+                </div>
+            </div>
+            <div class="row-start-3 row-end-6 group rounded-2xl p-[2px] bg-slate-100 hover:bg-gradient-to-br  hover: from-red- hover:via-purple-200 hover:to-yellow-200">
+                <div class="rounded-2xl bg-white  w-full h-full p-6 flex flex-col gap-6 items-center group-hover:bg-gradient-to-br  group-hover: from-red-50 group-hover:via-purple-50 group-hover:to-yellow-50">
+                  <h3 class="text-2xl font-medium">New Events!!</h3>
+                  <p class="text-lg text-center font-light"> We'll ensure underlying browser is up to date and deliver performance improvements,security patches, & additional features</p>
+                  <div class="flex gap-2">
+                    <img src="https://cdn.icon-icons.com/icons2/112/PNG/512/documents_folder_18875.png" class="max-w-12 max-h-12" alt="img">
+                        <div class="flex flex-col p-1">
+                        <p class="font-medium text-sm">New Event!!</p>
+                        <p class="font-normal text-sm text-gray-400">singh@gmail.com</p>
+                        </div>
+                 
+               
+                  </div>
+                 
+
+                </div>
+            </div>
+          
+
+
+         </div>
+         </div>
+
+         
+        <div class="px-6 py-12 max-w-7xl mt-12 mx-auto lg:px-8 lg:mt-16 ">
+            <h class="text-5xl sm:font-semibold pb-32" >How it Works</h2>
+            
+                <div class="rounded-xl  border px-8 py-12 flex flex-col mt-2">
+                <div class="flex flex-col gap-6 ">
+
+                 <span class= "text-lg font-medium border border-yellow-300 bg-yellow-50 text-yellow-800 w-fit px-3 py-1 rounded-lg font-display">Step 1</span>
+                 <p class="text-4xl font-medium">Bootstrap straight from your web app</p>
+                <p class="text-lg font-light">Copy and paste your web App url To Simplify.Customize your app design,app icon and frame UI with no code.</p>
+                <ul class="grid grid-cols-2 gap-2">
+                 <li class="flex gap-4">
+                    <img class="max-w-6 max-h-6 mt-1" src="https://icon-library.com/images/checkmark-icon-png/checkmark-icon-png-13.jpg" alt="img">
+                    <a class="font-light text-lg border-b border-black border-opacity-30 hover:border-opacity-30" href="#" >Multiple Windows</a>
+                </li>
+                <li class="flex gap-4">
+                    <img class="max-w-6 max-h-6 mt-1" src="https://icon-library.com/images/checkmark-icon-png/checkmark-icon-png-13.jpg" alt="img">
+                    <a class="font-light text-lg border-b border-black border-opacity-30 hover:border-opacity-30" href="#" >Multiple Windows</a>
+                </li>
+                <li class="flex gap-4">
+                    <img class="max-w-6 max-h-6 mt-1" src="https://icon-library.com/images/checkmark-icon-png/checkmark-icon-png-13.jpg" alt="img">
+                    <a class="font-light text-lg border-b border-black border-opacity-30 hover:border-opacity-30" href="#" >Multiple Windows</a>
+                </li>
+                <li class="flex gap-4">
+                    <img class="max-w-6 max-h-6 mt-1" src="https://icon-library.com/images/checkmark-icon-png/checkmark-icon-png-13.jpg" alt="img">
+                    <a class="font-light text-lg border-b border-black border-opacity-30 hover:border-opacity-30" href="#" >Multiple Windows</a>
+                </li>
+                <li class="flex gap-4">
+                    <img class="max-w-6 max-h-6 mt-1" src="https://icon-library.com/images/checkmark-icon-png/checkmark-icon-png-13.jpg" alt="img">
+                    <a class="font-light text-lg border-b border-black border-opacity-30 hover:border-opacity-30" href="#" >Multiple Windows</a>
+                </li>
+                <li class="flex gap-4">
+                    <img class="max-w-6 max-h-6 mt-1" src="https://icon-library.com/images/checkmark-icon-png/checkmark-icon-png-13.jpg" alt="img">
+                    <a class="font-light text-lg border-b border-black border-opacity-30 hover:border-opacity-30" href="#" >Multiple Windows</a>
+                </li>
+             
+                </ul>       
+            
+                 </div>
+                  
+                 <div class="flex mt-4">
+                   <img src="https://www.pngall.com/wp-content/uploads/2/Upload-Transparent.png"  class="max-w-20 max-h-20 m-4" alt="img">
+                   <p class=" mt-10 text-lg font-medium">Upload here</p>
+                 </div>
+              
+              
+                </div>
+        </div>
+
+        <div id="Pricing" class="px-6 py-12 max-w-7xl mt-10 mx-auto lg:px-8 lg:mt-28">
+         <h2 class=" text-5xl sm:font-semibold">Choose a plan that fits your needs</h2>
+         <div class=" flex flex-col lg:flex-row mt-6 gap-6">
+            <div class="border flex-1 rounded-xl px-8 pt-12 pb-8 flex flex-col gap-6 lg:border-none lg:bg-slate-50">
+                 <h3 class="text-4xl">Free</h3>
+                 <p class="text-lg font-light">For personal use or testing your app before deploying to Customers.</p>
+                 <p class="uppercase">KEY FEATURES</p>
+                <ul class="space-y-3">
+                    <li class="flex items-center gap-3">
+                        <img class="max-w-6 max-h-6 mt-1" src="https://icon-library.com/images/checkmark-icon-png/checkmark-icon-png-13.jpg" alt="img">
+                    <span class="text-lg font-light text-gray-500" href="#" >Free for personal use</span>
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <img class="max-w-6 max-h-6 mt-1" src="https://icon-library.com/images/checkmark-icon-png/checkmark-icon-png-13.jpg" alt="img">
+                    <span class="text-lg font-light text-gray-500" href="#" >Free for personal use</span>
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <img class="max-w-6 max-h-6 mt-1" src="https://thumb.ac-illust.com/f4/f4a1ca69acfbf5660307fb573299eaaf_t.jpeg" alt="img">
+                    <span class="text-lg font-light text-gray-500" href="#" >Free for personal use</span>
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <img class="max-w-6 max-h-6 mt-1" src="https://thumb.ac-illust.com/f4/f4a1ca69acfbf5660307fb573299eaaf_t.jpeg" alt="img">
+                    <span class="text-lg font-light text-gray-500" href="#" >Free for personal use</span>
+                    </li>
+                </ul>
+                <button class="border px-8 py-3 text-blue-500 rounded-lg hover:border-gray-800 font-display font-medium">
+                    Read Docs
+                </button>
+            </div>
+            <div class="border flex-1 rounded-xl px-8 pt-12 pb-8 flex flex-col gap-6 lg:border-none lg:bg-slate-50">
+                    <h3 class="text-4xl">Essential</h3>
+                    <p class="text-lg font-light">For simple desktop apps.</p>
+                    <p class="font-bold text-lg">$99<span class="font-normal text-lg text-gray-500"> /months</span></p>
+                    <p class="uppercase">KEY FEATURES</p>
+                
+                   <ul class="space-y-3">
+                       <li class="flex items-center gap-3">
+                           <img class="max-w-6 max-h-6 mt-1" src="https://icon-library.com/images/checkmark-icon-png/checkmark-icon-png-13.jpg" alt="img">
+                       <span class="text-lg font-light text-gray-500" href="#" >Free for personal use</span>
+                       </li>
+                       <li class="flex items-center gap-3">
+                           <img class="max-w-6 max-h-6 mt-1" src="https://icon-library.com/images/checkmark-icon-png/checkmark-icon-png-13.jpg" alt="img">
+                       <span class="text-lg font-light text-gray-500" href="#" >Free for personal use</span>
+                       </li>
+                       <li class="flex items-center gap-3">
+                           <img class="max-w-6 max-h-6 mt-1" src="https://thumb.ac-illust.com/f4/f4a1ca69acfbf5660307fb573299eaaf_t.jpeg" alt="img">
+                       <span class="text-lg font-light text-gray-500" href="#" >Free for personal use</span>
+                       </li>
+                       <li class="flex items-center gap-3">
+                           <img class="max-w-6 max-h-6 mt-1" src="https://thumb.ac-illust.com/f4/f4a1ca69acfbf5660307fb573299eaaf_t.jpeg" alt="img">
+                       <span class="text-lg font-light text-gray-500" href="#" >Free for personal use</span>
+                       </li>
+                   </ul>
+                   <button class="border px-8 py-3 text-blue-500 rounded-lg hover:border-gray-800 font-display font-medium">
+                       Read Docs
+                   </button>
+             </div>
+            <div class="border  flex-1 rounded-xl px-8 pt-12 pb-8 flex flex-col gap-6 relative lg:border-none lg:bg-slate-50">
+                <p class="text-blue-800 text-sm bg-indigo-100 rounded-full w-fit px-4 py-2  font-semibold font-display absolute top-0 right-8 -translate-y-1/2">Most Popular</p>
+                    <h3 class="text-4xl">Professional</h3>
+                    <p class="text-lg font-light">For sophisticated desktop apps.</p>
+                    <p class="font-bold text-lg">$240<span class="font-normal text-lg text-gray-500"> /months</span></p>
+                    <p class="uppercase">KEY FEATURES</p>
+                   <ul class="space-y-3">
+                       <li class="flex items-center gap-3">
+                           <img class="max-w-6 max-h-6 mt-1" src="https://icon-library.com/images/checkmark-icon-png/checkmark-icon-png-13.jpg" alt="img">
+                       <span class="text-lg font-light text-gray-500" href="#" >Free for personal use</span>
+                       </li>
+                       <li class="flex items-center gap-3">
+                           <img class="max-w-6 max-h-6 mt-1" src="https://icon-library.com/images/checkmark-icon-png/checkmark-icon-png-13.jpg" alt="img">
+                       <span class="text-lg font-light text-gray-500" href="#" >Free for personal use</span>
+                       </li>
+                       <li class="flex items-center gap-3">
+                           <img class="max-w-6 max-h-6 mt-1" src="https://thumb.ac-illust.com/f4/f4a1ca69acfbf5660307fb573299eaaf_t.jpeg" alt="img">
+                       <span class="text-lg font-light text-gray-500" href="#" >Free for personal use</span>
+                       </li>
+                       <li class="flex items-center gap-3">
+                           <img class="max-w-6 max-h-6 mt-1" src="https://thumb.ac-illust.com/f4/f4a1ca69acfbf5660307fb573299eaaf_t.jpeg" alt="img">
+                       <span class="text-lg font-light text-gray-500" href="#" >Free for personal use</span>
+                       </li>
+                   </ul>
+                   <button class="bg-blue-700 px-8 py-3 text-white rounded-lg hover:bg-opacity-90 font-display font-medium">
+                       Read Docs
+                   </button>
+             </div>
+         </div>
+        </div>
+    
+       <div id="faq" class="px-6 py-12 max-w-7xl mt-10 mx-auto lg:px-8 lg:mt-16">
+          <h2 class="text-5xl sm:font-semibold pb-4">FAQs</h2>
+           <div class="grid grid-cols-1 lg:grid-cols-1 gap-6">
+             <div class="group rounded-xl border border-gray-200 bg-gray-50">
+            <dt class="flex justify-between items-center p-5 " aria-controls="faq-1">
+                <p class="font-semibold text-lg ">Is Simplfy for me ?</p>
+                <img class=" max-w-5 max-h-5 -rotate-180" src="https://www.svgrepo.com/show/439661/chevron-up.svg" alt="img">
+            </dt>
+            <dd id="faq-1" class=" hidden text-lg font-light m-5">
+                <p>That depends! If you would like to distribute our web app to your useers  as a Downloadable desktop app then simple is for you.</p>
+            </dd>
+             </div>
+             <div class="group rounded-xl border border-gray-200 bg-gray-50">
+                <dt class="flex justify-between items-center p-5 " aria-controls="faq-1">
+                    <p class="font-semibold text-lg ">Role of Simplify in Web Apps ?</p>
+                    <img class=" max-w-5 max-h-5 -rotate-180" src="https://www.svgrepo.com/show/439661/chevron-up.svg" alt="img">
+                </dt>
+                <dd id="faq-1" class=" hidden text-lg font-light m-5">
+                    <p>That depends! If you would like to distribute our web app to your useers  as a Downloadable desktop app then simple is for you.</p>
+                </dd>
+                 </div>
+                 <div class="group rounded-xl border border-gray-200 bg-gray-50">
+                    <dt class="flex justify-between items-center p-5 " aria-controls="faq-1">
+                        <p class="font-semibold text-lg ">what is the best plan for me ?</p>
+                        <img class=" max-w-5 max-h-5 -rotate-180" src="https://www.svgrepo.com/show/439661/chevron-up.svg" alt="img">
+                    </dt>
+                    <dd id="faq-1" class=" hidden text-lg font-light m-5">
+                        <p>That depends! If you would like to distribute our web app to your useers  as a Downloadable desktop app then simple is for you.</p>
+                    </dd>
+                     </div>
+                     <div class="group rounded-xl border border-gray-200 bg-gray-50">
+                        <dt class="flex justify-between items-center p-5 " aria-controls="faq-1">
+                            <p class="font-semibold text-lg ">How can I upload the App on Simplfy ?</p>
+                            <img class=" max-w-5 max-h-5 -rotate-180" src="https://www.svgrepo.com/show/439661/chevron-up.svg" alt="img">
+                        </dt>
+                        <dd id="faq-1" class=" hidden text-lg font-light m-5">
+                            <p>That depends! If you would like to distribute our web app to your useers  as a Downloadable desktop app then simple is for you.</p>
+                        </dd>
+                         </div>
+           </div>
+
+       </div>   
+
+
+
+    </div>
+    
+</main>
+
+
+
+
+
+
 
 </body>
+<script src="script.js"></script>
 </html>
